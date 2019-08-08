@@ -13,6 +13,12 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use('/api/v1/profile', profileRouter)
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(__dirname + '/public/'))
+
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'))
+}
+
 const PORT = process.env.PORT
 
 app.listen(PORT, () => {

@@ -1,0 +1,26 @@
+{
+  "name": "apex-tracker",
+  "version": "1.0.0",
+  "description": "Tracks APEX Legends Stats",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Milad Mikeal",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
